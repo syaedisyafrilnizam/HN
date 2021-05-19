@@ -21,29 +21,7 @@ db.connect(function(err) {
 
 app.get("/setup_db", function(req, res) {
   var sql = `
-    create table address (
-          address_id int unsigned not null auto_increment,
-          recipient varchar(30),
-          address varchar(100) not null,
-          city varchar(20),
-          state varchar(20),
-          zip char(5),
-          phone varchar(20),
-          primary key(address_id)
-    );
-
-    create table member (
-          user_id varchar(30) not null,
-          password varchar(200) not null,
-          fullname varchar(50) not null,
-          gender char(1),
-          birth date,
-          email varchar(50),
-          phone varchar(20),
-          s_money int,
-          creation_time timestamp default current_timestamp,
-          primary key(user_id)
-    );
+    
   `
 
   db.query(sql, function(err, result) {
