@@ -1,0 +1,116 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Colour palette:
+  1: #b4d4e4
+  2: #fbc314
+  3: #545474
+  4: #647c9c
+  5: #94a4b4
+  6: #c4ccac
+  7: #a0c0e8
+*/
+
+html, body {
+  height: 100%
+}
+
+body {
+  padding-top: 60px;
+  padding-bottom: 3rem;
+  color: #5a5a5a;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h6:hover {
+  cursor: pointer;
+}
+
+.disc-tag {
+  background-color: #ea5455;
+  border-radius: 10px;
+  color: #e5e5e5;
+  padding: 2px 5px;
+}
+
+.card-body {
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  small.text-muted, button.btn.btn-sm {
+    font-size: 1.5vw!important;
+  }
+  .card-body {
+    padding: 1.8vw!important;
+  }
+}
+
+@media (min-width: 992px) {
+  small.text-muted, button.btn.btn-sm {
+    font-size: 1.1vw!important;
+  }
+  .card-body {
+    padding: 1.3vw!important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container-fluid {
+    padding: 2.5vw!important;
+  }
+
+  .card, .card-body, .price-tag, h6, .card-text {
+    font-size: 1vw;
+  }
+
+  small.text-muted, button.btn.btn-sm {
+    font-size: 0.75vw!important;
+  }
+
+  .card-body {
+    padding: 1vw!important;
+  }
+}
+
+@media (max-width: 576px) {
+  .container-fluid.p-5 {
+    padding: 3% 5%!important;
+  }
+
+  .card {
+    margin-bottom: 0!important;
+  }
+
+  .card-body {
+    padding: 6% 4% 4%!important;
+  }
+
+  .col-6 {
+    padding: 1% !important;
+  }
+
+  i.fas.fa-star, small {
+    font-size: 2.5vw;
+  }
+
+  .card, .card-body, .price-tag, h6, .card-text {
+    font-size: 3.4vw;
+  }
+
+  .disc-tag {
+    margin: 0!important;
+  }
+
+  .btn {
+    display: none!important;
+  }
+}
+
+@media (max-width: 438px) {
+  .card, .card-body, .price-tag, h6, .card-text {
+    font-size: 3.8vw;
+  }
+}

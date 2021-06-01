@@ -16,7 +16,14 @@ const QRCode = require('qrcode');
 
 /* ---------- User-defined Module ------------- */
 const connection = require("./lib/dbconn"); // DB 연결
+const user = require('./routes/user');
+const home = require('./routes/home');
+const bulletin = require('./routes/bulletin');
 
+const contact = require('./routes/contact');
+const chat = require('./routes/chat');
+const discover = require('./routes/discover');
+const places = require('./routes/places');
 
 /* -------------------------------------------- */
 const app = express();
@@ -43,6 +50,46 @@ app.use(session({
   saveUninitialized: false,
   cookie: { maxAge: 60*60*1000 } // max period 1 hour
 }));
+
+/* --- Section for developing pages --- */
+
+// Root redirects to Homepage
+app.get("/", function (req, res) {
+  res.redirect("/home");
+});
+
+// Homepage
+app.get("/home", home.main);
+
+// Signup
+app.get("/signup", user.signup);
+app.post("/signup", user.signup);
+
+// Login
+app.get("/login", user.login);
+app.post("/login", user.login);
+
+// Logout
+app.get("/logout", user.logout);
+
+// Bulletin Board
+app.get("/bulletin-board", bulletin.main); // 인욱 - Bulletin Board, Post View
+app.get("/post", bulletin.viewPost);
+
+// Contact List
+app.get("/contact", contact.main); // 영일 - Contact list
+
+// Chat System
+app.get("/chat", chat.main); // 신이 - Chat list
+
+// Discover
+app.get("/discover", discover.main); // 신이 - Discover
+
+// Local Places
+app.get("/places", places.main); // 영일 - Local Places
+
+
+/* ----------------------------------- */
 
 // Setting port
 let port = process.env.PORT;

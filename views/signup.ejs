@@ -1,0 +1,111 @@
+<%- include("partials/header"); -%>
+<!-- Custom styles -->
+<link href="css/signup.css" rel="stylesheet">
+</head>
+
+<body class="text-center" style="background-color: #b6d5e1;" id="bootstrap-overrides">
+  <form class="signup" method="post" action="/signup">
+    <a href="/home"><img src="images/hn-logo-tr.png" class="mb-3" width="200px" height="" /></a>
+    <h2 class="mb-4 font-weight-normal"><b>Account Registration</b></h2>
+
+    <% if (message != "") { %>
+    <div class="alert alert-<%= statusCode == 200 ? "success" : "danger" %>" role="alert">
+      <%= message %>
+    </div>
+    <%}%>
+
+    <label for="fullname" class="sr-only">Full Name</label>
+    <input name="fullname" type="" class="form-control my-4" placeholder="Full Name" maxlength="50" required />
+
+    <label for="userid" class="sr-only">Username</label>
+    <input name="userid" type="" class="form-control" placeholder="Username" id="userid" minlength="4" maxlength="20" autocomplete="off" pattern="[a-zA-Z0-9.]{4,20}" required />
+    <small class="form-text text-muted mb-3" align="left">
+      Username must be below 20 characters.
+      <span id='id-check-duplicate' class="hidden text-danger"><i class='fas fa-exclamation-circle fa-lg'></i> Username already exist!</span>
+      <span id='id-check-usable' class="hidden text-success"><i class='fas fa-check-circle fa-lg'></i> Username is available.</span>
+    </small>
+
+    <label for="password" class="sr-only">Password</label>
+    <input name="password" type="password" id="password" class="form-control" placeholder="Password" minlength="6" maxlength="50" required />
+    <small class="form-text text-muted mb-3" align="left">Password must be below 50 characters.</small>
+
+    <label for="password_confirm" class="sr-only">Re-type Password</label>
+    <input name="password_confirm" type="password" id="password_confirm" class="form-control mb-4" placeholder="Re-type Password" minlength="6" maxlength="50" size="50px" required>
+
+    <label for="gender" class="sr-only">Gender</label>
+    <select id="gender" name="gender" class="form-control mr-3" style="width: 30%; float:left;">
+      <option value="" selected>Select</option>
+      <option value="M">Male</option>
+      <option value="F">Female</option>
+    </select>
+
+    <label for="birth" class="sr-only">Date of Birth</label>
+    <div class="row">
+      <div class="col-4 dob-pr-rm">
+        <input type="" id="yy" name="yy" placeholder="Year" class="form-control" maxlength="4">
+      </div>
+      <div class="col-4 dob-pr-rm">
+        <select id="mm" name="mm" class="form-control" aria-label="Month">
+          <option value="">Month</option>
+          <option value="01">1</option>
+          <option value="02">2</option>
+          <option value="03">3</option>
+          <option value="04">4</option>
+          <option value="05">5</option>
+          <option value="06">6</option>
+          <option value="07">7</option>
+          <option value="08">8</option>
+          <option value="09">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select>
+      </div>
+      <div class="col-4 dob-pr-rm">
+        <input type="" class="form-control" id="dd" name="dd" placeholder="Day" maxlength="2">
+      </div>
+      <small class="form-text text-muted mb-3 ml-3" align="left">Input date of birth correctly.</small>
+    </div>
+
+    <label for="email" class="sr-only">E-mail</label>
+    <input name="email" type="email" id="email" class="form-control mb-4" placeholder="E-mail" maxlength="50" required>
+
+    <label for="no_tel" class="sr-only">Phone Number</label>
+    <input name="no_tel" type="tel" id="no_tel" class="form-control" placeholder="Phone Number" maxlength="20" required>
+    <small class="form-text text-muted mb-4" align="left">Input without '-' sign.</small>
+
+    <div class="row mb-5">
+      <div class="col-6 cancel-box">
+        <a class="btn btn-block btn-danger" href="/login">Cancel</a>
+      </div>
+      <div class="col-6 register-box">
+        <button class="btn btn-block btn-primary" type="submit" id="signup" name="signup">Register</button>
+      </div>
+    </div>
+  </form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- 중복 체크 스크립트 -->
+<!-- user.js로부터 넘겨준 데이터를 받아 input hidden의 값에 지정 -->
+<input type="hidden" id="regUserids" name="regUserids" value="<%= regUserids ? regUserids : "" %>"/>
+<script>
+  var regUserids = $('#regUserids').val().split(",");
+
+  $('#userid').on("input propertychange paste", function() {
+    if ($('#userid').val() == "") {
+      $('#id-check-usable').addClass('hidden');
+      $('#id-check-duplicate').addClass('hidden');
+    } else {
+      if(regUserids.includes($('#userid').val())) {
+        $('#id-check-duplicate').removeClass('hidden');
+        $('#id-check-usable').addClass('hidden');
+      } else {
+        $('#id-check-usable').removeClass('hidden');
+        $('#id-check-duplicate').addClass('hidden');
+      }
+    }
+  });
+</script>
+<%- include("partials/copyright"); -%>
+<%- include("partials/footer"); -%>

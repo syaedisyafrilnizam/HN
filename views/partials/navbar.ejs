@@ -1,0 +1,56 @@
+
+<nav id="main-navbar" class="navbar navbar-expand-md navbar-dark fixed-top">
+  <a class="navbar-brand" href="/home">Hi, Neighbours!</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbars">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="navbar-brand mr-0" href="/account/profile"><span class="link-name d-inline d-sm-inline d-md-none mr-2">내 계정</span><i class="fas fa-user-circle mr-2"></i></a>
+      </li>
+      <li class="nav-item dropdown mr-3">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Hello, <%= user_id ? user_id : "guest"; %>!
+        </a>
+        <div class="dropdown-menu" aria-labelledby="dropdown01">
+          <% if (user_id) { %>
+            <a class="dropdown-item" href="/logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+          <% } else { %>
+            <a class="dropdown-item" href="/login"><i class="fas fa-sign-in-alt"></i> Login</a>
+          <%}%>
+          <a class="dropdown-item" href="/about"><i class="fas fa-building"></i> About us</a>
+          <a class="dropdown-item" href="/customerCenter"><i class="far fa-question-circle"></i> Help centre</a>
+        </div>
+      </li>
+
+        <!-- <li class="nav-item notification-link">
+          <a class="navbar-brand" style="color: #ffd571;" href="/my-notification"><span class="link-name d-inline d-sm-inline d-md-none mr-2">알림</span><i class="fas fa-bell"></i><span class="sm-num"> <%= sess.noOfNotifications > 0 ? sess.noOfNotifications : "" %></span></a>
+        </li>
+        <li class="nav-item receipt-link">
+          <a class="navbar-brand" style="color: #c7b198;" href="/my-receipt"><span class="link-name d-inline d-sm-inline d-md-none mr-2">수령목록</span> <i class="fas fa-box"></i><span class="sm-num"> <%= sess.noOfReceivingItems > 0 ? sess.noOfReceivingItems : "" %></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="navbar-brand cart-link"  style="color: #24a19c;" href="/my-cart"><span class="link-name d-inline d-sm-inline d-md-none mr-2">쇼핑카트</span> <i class="fas fa-shopping-cart"></i><span class="sm-num"> <%= sess.noOfCartItems > 0 ? sess.noOfCartItems : "" %></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="navbar-brand wishlist-link"  style="color: #ea5455;" href="/my-wishlist"><span class="link-name d-inline d-sm-inline d-md-none mr-2">위시리스트</span> <i class="fas fa-heart"></i><span class="sm-num"> <%= sess.noOfWishlistItems > 0 ? sess.noOfWishlistItems : "" %></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="navbar-brand qrcode-link" style="color: #3282b8;" href="/qrcode"><span class="link-name d-inline d-sm-inline d-md-none mr-2">QR스캔</span> <i class="fas fa-qrcode"></i></a>
+        </li> -->
+    </ul>
+    <form class="">
+      <div class="d-flex bd-highlight justify-content-center">
+        <input class="form-control bd-highlight mr-1" type="text" aria-label="Search">
+        <button class="btn btn-secondary flex-shrink-1 bd-highlight ml-1" type="submit"><i class="fas fa-search"></i></button>
+      </div>
+    </form>
+    <div class="d-none">
+      <a class="mx-2 qrcode-link" href="/qrcode"><i class="fas fa-qrcode fa-lg"></i></a>
+      <a class="mx-2 cart-link" href="/my-cart"><i class="fas fa-shopping-cart fa-lg"></i><span class="sm-num"> <%= sess.noOfCartItems > 0 ? sess.noOfCartItems : "" %></span></a>
+      <a class="mx-2 wishlist-link" href="/my-wishlist"><i class="fas fa-heart fa-lg"></i><span class="sm-num"> <%= sess.noOfWishlistItems > 0 ? sess.noOfWishlistItems : "" %></span></a>
+    </div>
+  </div>
+</nav>

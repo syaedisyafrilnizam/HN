@@ -21,7 +21,33 @@ db.connect(function(err) {
 
 app.get("/setup_db", function(req, res) {
   var sql = `
-    
+  create table address (
+        address_id int unsigned not null auto_increment,
+        recipient varchar(30),
+        address varchar(100) not null,
+        city varchar(20),
+        state varchar(20),
+        zip char(5),
+        tel varchar(20),
+        primary key(address_id)
+  );
+
+  create table user (
+        user_id varchar(30) not null,
+        password varchar(200) not null,
+        fullname varchar(50) not null,
+        gender char(1),
+        birth date,
+        email varchar(50),
+        phone varchar(20),
+        creation_time timestamp default current_timestamp,
+        primary key(user_id)
+  );
+
+  ALTER TABLE user ADD COLUMN default_address int unsigned AFTER phone;
+  ALTER TABLE user ADD FOREIGN KEY (default_address) REFERENCES address(address_id) ON DELETE CASCADE;
+  ALTER TABLE address ADD COLUMN user_id varchar(30) not null AFTER tel;
+  ALTER TABLE address ADD FOREIGN KEY (user_id) REFERENCES user(user_id) ON DELETE CASCADE;
   `
 
   db.query(sql, function(err, result) {
