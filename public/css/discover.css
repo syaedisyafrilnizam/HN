@@ -1,0 +1,21 @@
+h3.t{ //not work
+  text-align: left;
+}
+
+.memory-box{ //not work
+  flex-direction: column;
+}
+
+.memory-content{ //not work
+  text-align:left;
+}
+
+.memory-attachment{
+
+}
+
+.comment-content{
+
+}
+
+/*how to resize image?*/
