@@ -24,6 +24,10 @@ a:hover {
   text-decoration: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 h6:hover {
   cursor: pointer;
 }
@@ -37,6 +41,13 @@ h6:hover {
 
 .card-body {
   height: 100%;
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
 
 @media (min-width: 768px) {

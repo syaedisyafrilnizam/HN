@@ -1,14 +1,16 @@
 
 <nav id="main-navbar" class="navbar navbar-expand-md navbar-dark fixed-top">
-  <a class="navbar-brand" href="/home">Hi, Neighbours!</a>
+  <span class="pr-3"><i class="fas fa-lg fa-bars text-light" onclick="openNav()"></i></span>
+  <a class="navbar-brand" href="/home"> Hi, Neighbours!</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
+
   <div class="collapse navbar-collapse" id="navbars">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="navbar-brand mr-0" href="/account/profile"><span class="link-name d-inline d-sm-inline d-md-none mr-2">내 계정</span><i class="fas fa-user-circle mr-2"></i></a>
+        <a class="navbar-brand mr-0" href="/account/profile"><span class="link-name d-inline d-sm-inline d-md-none mr-2">My Account</span><i class="fas fa-lg fa-user-circle mr-2"></i></a>
       </li>
       <li class="nav-item dropdown mr-3">
         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -40,8 +42,11 @@
         <li class="nav-item">
           <a class="navbar-brand qrcode-link" style="color: #3282b8;" href="/qrcode"><span class="link-name d-inline d-sm-inline d-md-none mr-2">QR스캔</span> <i class="fas fa-qrcode"></i></a>
         </li> -->
+        <!-- <li>
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        </li> -->
     </ul>
-    <form class="">
+    <!-- <form class="">
       <div class="d-flex bd-highlight justify-content-center">
         <input class="form-control bd-highlight mr-1" type="text" aria-label="Search">
         <button class="btn btn-secondary flex-shrink-1 bd-highlight ml-1" type="submit"><i class="fas fa-search"></i></button>
@@ -51,6 +56,52 @@
       <a class="mx-2 qrcode-link" href="/qrcode"><i class="fas fa-qrcode fa-lg"></i></a>
       <a class="mx-2 cart-link" href="/my-cart"><i class="fas fa-shopping-cart fa-lg"></i><span class="sm-num"> <%= sess.noOfCartItems > 0 ? sess.noOfCartItems : "" %></span></a>
       <a class="mx-2 wishlist-link" href="/my-wishlist"><i class="fas fa-heart fa-lg"></i><span class="sm-num"> <%= sess.noOfWishlistItems > 0 ? sess.noOfWishlistItems : "" %></span></a>
+    </div> -->
+  </div>
+
+  <div id="mySidenav" class="sidenav navbar-dark text-start">
+    <div class="pt-2 px-3 position-relative">
+      <img src="../images/hn-logo-tr.png" width="50px" />
+      <span class="navbar-brand"> Hi, Neighbours!</span>
+      <div class="position-absolute top-0 end-0 d-inline-block btn-close-box" onclick="closeNav()"><i class="fas fa-lg fa-times text-light"></i></div>
+      <div class="row pt-2">
+        <div class="col-4 pr-3">
+          <img src="../images/avatar-thumbnail.png" class="bg-light" height="90px" alt="display-pic">
+        </div>
+        <div class="col-8">
+          <p class="m-0">User Test</p>
+          <p class="m-0">usertest@gmail.com</p>
+        </div>
+      </div>
+      <p class="my-2"><i class="fas fa-map-marker-alt text-danger mr-2"></i>Hwayang-dong, Seoul</p>
+      <button class="btn btn-warning mr-1">My Profile</button>
+      <button class="btn btn-warning ml-1">Account Info</button>
+      <hr class="border-secondary mt-3 mb-2">
+      <p class="my-1 text-light">Quick menu</p>
+
+      <div class="row mt-3">
+        <div class="col-2 my-1"><i class="fas fa-lg fa-camera text-warning mr-3"></i></div><div class="col-10 my-1">Write a memory</div>
+        <div class="col-2 my-1"><i class="fas fa-lg fa-feather-alt text-warning mr-3"></i></div><div class="col-10 my-1">Write a post</div>
+        <div class="col-2 my-1"><i class="fas fa-lg fa-bookmark text-warning mr-3"></i></div><div class="col-10 my-1">Saved posts</div>
+        <div class="col-2 my-1"><i class="fas fa-lg fa-comments text-warning mr-3"></i></div><div class="col-10 my-1">Start a conversation</div>
+        <div class="col-2 my-1"><i class="fas fa-lg fa-user-plus text-warning mr-3"></i></div><div class="col-10 my-1">Add a contact</div>
+      </div>
+
+      <div class="input-group mt-5 mb-3">
+        <input type="text" class="form-control mr-2" placeholder="Search post" aria-label="Search post" aria-describedby="basic-addon2">
+        <span class="input-group-text bg-warning border-warning" id="basic-addon2"><i class="fas fa-lg fa-search text-dark"></i></span>
+      </div>
+
+      <hr class="border-secondary mt-3 mb-2">
+      <p class="my-1 text-light">Settings</p>
+
+      <div class="row mt-3">
+        <div class="col-2 my-1"><i class="fas fa-lg fa-cog text-warning mr-3"></i></div><div class="col-10 my-1">General</div>
+        <div class="col-2 my-1"><i class="fas fa-lg fa-book-reader text-warning mr-3"></i></div><div class="col-10 my-1">Senior mode</div>
+        <div class="col-2 my-1"><i class="fas fa-lg fa-exclamation-circle text-warning mr-3"></i></div><div class="col-10 my-1">Report an issue</div>
+        <div class="col-2 my-1"><i class="fas fa-lg fa-sign-out-alt text-warning mr-3"></i></div><div class="col-10 my-1">Logout</div>
+      </div>
+
     </div>
   </div>
 </nav>

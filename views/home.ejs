@@ -3,11 +3,84 @@
 <link href="css/main.css" rel="stylesheet">
 </head>
 
-<body class="text-center bg-light">
+<body style="background-color: #b4d4e4;">
 <%- include("partials/navbar"); -%>
 
 <main role="main">
-  <h2>Test content</h2>
+  <div class="container pt-4">
+    <div class="row text-center">
+      <div class="col-2 p-3 mx-3 rounded-pill text-light" style="background-color: #545474">
+        <a href="/contact" class="text-light"><i class="fas fa-2x fa-address-book text-warning mr-3"></i>Contacts</a>
+      </div>
+      <div class="col-2 p-3 mx-3 rounded-pill text-light" style="background-color: #545474">
+        <a href="/chat" class="text-light"><i class="fas fa-2x fa-comments text-warning mr-3"></i>Chat</a>
+      </div>
+      <div class="col-2 p-3 mx-3 rounded-pill text-light" style="background-color: #545474">
+        <a href="/discover" class="text-light"><i class="fas fa-2x fa-compass text-warning mr-3"></i>Discover</a>
+      </div>
+      <div class="col-2 p-3 mx-3 rounded-pill text-light" style="background-color: #545474">
+        <a href="/places" class="text-light"><i class="fas fa-2x fa-building text-warning mr-3"></i>Local Places</a>
+      </div>
+      <div class="col-2 p-3 mx-3 rounded-pill text-light" style="background-color: #545474">
+        <a href="/saved-post" class="text-light"><i class="fas fa-2x fa-bookmark text-warning mr-3"></i>Saved Posts</a>
+      </div>
+    </div>
+
+    <div class="card my-4">
+      <div class="card-header clearfix">
+        <h5 class="card-title m-0 float-start">Bulletin Board</h5>
+        <a href="/home" class="btn btn-secondary btn-sm float-end ml-2"><i class="fas fa-plus text-light"></i></a>
+        <a href="/bulletin-board" class="btn btn-secondary btn-sm float-end"><i class="fas fa-external-link-alt text-light"></i></a>
+      </div>
+      <div class="card-body" style="height: 300px">
+        <p class="card-text">Posts are reflected inside here.</p>
+      </div>
+      <div class="card-body">
+        <span class="mr-3">Category: </span>
+        <a href="#" class="card-link">Public</a>
+        <a href="#" class="card-link">News</a>
+        <a href="#" class="card-link">Event</a>
+        <a href="#" class="card-link">Anonymous</a>
+        <a href="#" class="card-link">Shop/Place</a>
+        <a href="#" class="card-link">Secondhand</a>
+        <a href="#" class="card-link">Lost & Found</a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-3">
+        <div class="card mb-4 shadow-sm align-self-strect" style="width: 18rem;">
+          <img src="../images/games-display.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Games</h5>
+            <p class="card-text">Play games with your family members, friends and neighbours. Let's have fun together!</p>
+            <a href="#" class="btn btn-primary">Choose game</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="card" style="width: 18rem;">
+          <img src="../images/mentor-display.jpg" height="190px" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Mentor & Mentee</h5>
+            <p class="card-text">Looking for a private mentor or coach? Find them here. They will guide you through any journey.</p>
+            <a href="#" class="btn btn-primary">Find my mentor</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="card" style="width: 18rem;">
+          <img src="../images/secondhand-display.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Secondhand Market</h5>
+            <p class="card-text">Inexpensive, high-quality secondhand market for those looking for anything they need.</p>
+            <a href="#" class="btn btn-primary">Shop now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </main>
 
 <!-- FOOTER -->

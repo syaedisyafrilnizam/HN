@@ -1,7 +1,6 @@
 nav {
-  background-color: #1b262c;
-  border-bottom: 4px solid #0f4c75;
-  text-align: center;
+  background-color: #545474;
+  border-bottom: 4px solid #647c9c;
 }
 
 .ssl {
@@ -41,6 +40,46 @@ a:hover {
 
 .nav-item {
   margin: 0px 4px;
+}
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 10000; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #545474;
+  color: #f1f1f1;
+  overflow: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #f1f1f1;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.closebtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.btn-close-box {
+  right: 10px;
 }
 
 @media (max-width: 767px) {

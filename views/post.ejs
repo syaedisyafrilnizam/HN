@@ -1,15 +1,56 @@
 <%- include("partials/header"); -%>
 <!-- Custom styles -->
-<link href="css/main.css" rel="stylesheet">
+<link href="css/post.css" rel="stylesheet">
 </head>
 
 <body class="text-center" style="background-color: #b6d5e1">
 <%- include("partials/navbar"); -%>
 
 <main role="main">
-  <div class="container py-4">
-    -- Code in here --
-  </div>
+  <form class="post">
+    <div class="container">
+      <!-- Category, tag, files -->
+      <div class="row row1">
+        <label for="category">Category</label>
+        <div class="option-box tag-box">
+          <label id="tag">Add tag</label>
+          <i class="fas fa-lg fa-plus-square text-secondary plus-square"></i>
+        </div>
+        <div class="option-box files-box">
+          <i class="fas fa-lg fa-smile text-secondary"></i>
+          <i class="fas fa-lg fa-paperclip text-secondary"></i>
+          <i class="fas fa-lg fa-image text-secondary"></i>
+          <i class="fas fa-lg fa-map-marker-alt text-secondary"></i>
+        </div>
+      </div>
+
+      <!-- Title -->
+      <div class="row row2">
+        <label for="title" class="sr-only">Title</label>
+        <input name="title" id="title" type="" placeholder="Title" maxlength="50" required />
+      </div>
+
+      <!-- Tag name, New Field -->
+      <div class="row row3">
+        <label for="tagName" class="sr-only">Tag name</label>
+        <input name="tagName" id="tagName" type="" placeholder="tagName" maxlength="50" required />
+
+        <label for="newField" class="sr-only">New Field</label>
+        <input name="newField" id="newField" type="" placeholder="New Field" maxlength="50" required />
+      </div>
+
+      <!-- Contents -->
+      <div class="row row4">
+        <label for="contents" class="sr-only">New Field</label>
+        <input name="contents" id="contents" type="" placeholder="What would you like to share?" maxlength="500" required />
+      </div>
+
+      <!-- Buttons -->
+          <button type="button" name="btn-cancel d-inline-block" class="btn btn-danger">Cancel</button>
+          <button type="submit" name="btn-post d-inline-block" class="btn btn-primary">Post</button>
+
+    </div>
+  </form>
 </main>
 
 <!-- FOOTER -->
