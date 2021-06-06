@@ -1,14 +1,38 @@
 <%- include("partials/header"); -%>
 <!-- Custom styles -->
-<link href="css/main.css" rel="stylesheet">
+<link href="css/bulletin.css" rel="stylesheet">
 </head>
 
 <body class="text-center" style="background-color: #b6d5e1">
 <%- include("partials/navbar"); -%>
 
 <main role="main">
-  <div class="container py-4">
-    -- Code in here --
+  <div class="container">
+    <!-- sort, search -->
+    <div class="row row1">
+      <label for="sort-type">Sort by: Latest</label>
+
+      <label for="search" class="sr-only">Search</label>
+      <input name="search" id="search" type="" placeholder="Search" maxlength="50" required />
+    </div>
+
+    <!-- boards list -->
+    <div class="row row2">
+      <button class="category" type="button" id="btn-public" name="btn-public">Public</button>
+      <button class="category" type="button" id="btn-news" name="btn-news">News</button>
+      <button class="category" type="button" id="btn-events" name="btn-events">Events</button>
+      <button class="category" type="button" id="anonymous" name="btn-anonymous">Anonymous</button>
+    </div>
+
+    <!-- list of post -->
+    <div class="row row3">
+
+    </div>
+
+    <!-- write button -->
+    <div class="row row4">
+      <button type="button" id="btn-write" name="btn-write">Write</button>
+    </div>
   </div>
 </main>
 
