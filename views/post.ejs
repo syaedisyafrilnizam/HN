@@ -3,54 +3,75 @@
 <link href="css/post.css" rel="stylesheet">
 </head>
 
-<body class="text-center" style="background-color: #b6d5e1">
+<body class="" style="background-color: #b6d5e1">
 <%- include("partials/navbar"); -%>
 
-<main role="main">
-  <form class="post">
-    <div class="container">
-      <!-- Category, tag, files -->
-      <div class="row row1">
-        <label for="category">Category</label>
-        <div class="option-box tag-box">
-          <label id="tag">Add tag</label>
-          <i class="fas fa-lg fa-plus-square text-secondary plus-square"></i>
+<main role="main" style="margin-top: 90px;">
+  <div class="container">
+    <h3 class="mt-4 mb-4"><a href="/home"><i class="fas fa-arrow-left text-dark mr-3"></i></a>View Post</h3>
+    <div class="card my-2">
+      <div class="card-body" style="">
+        <table class="table w-25">
+          <tbody>
+            <tr>
+              <th scope="row">Post ID</th>
+              <td>1593</td>
+            </tr>
+            <tr>
+              <th scope="row">Date</th>
+              <td>31/03/21  10:40 AM</td>
+            </tr>
+            <tr>
+              <th scope="row">Title</th>
+              <td colspan="2">Larry the Bird</td>
+            </tr>
+            <tr>
+              <th scope="row">By</th>
+              <td colspan="2">User1</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="mb-4">
+          <span class="rounded-pill bg-primary mx-1 px-3 py-1 text-light">Type: Selling</span>
+          <span class="rounded-pill bg-primary mx-1 px-3 py-1 text-light">Price: 40,000 WON</span>
+          <span class="rounded-pill bg-primary mx-1 px-3 py-1 text-light">Category: Shoes</span>
+          <span class="rounded-pill bg-primary mx-1 px-3 py-1 text-light">Contact: 01012345678</span>
+          <span class="rounded-pill bg-primary mx-1 px-3 py-1 text-light">Negotiable: Yes</span>
+          <span class="rounded-pill bg-primary mx-1 px-3 py-1 text-light">Condition: 7/10</span>
         </div>
-        <div class="option-box files-box">
-          <i class="fas fa-lg fa-smile text-secondary"></i>
-          <i class="fas fa-lg fa-paperclip text-secondary"></i>
-          <i class="fas fa-lg fa-image text-secondary"></i>
-          <i class="fas fa-lg fa-map-marker-alt text-secondary"></i>
+        <p style="white-space: pre-wrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus bibendum dapibus mi, vel tincidunt sapien. Morbi dui metus, vehicula ut velit a, iaculis interdum quam. Sed at nulla eget dui consectetur dapibus. Sed vel mi vel leo convallis aliquet sit amet in leo. In gravida sed tortor quis varius. Donec vel nulla sem. Nullam varius sit amet mauris sed interdum. Etiam pharetra rhoncus nisl, commodo tincidunt enim efficitur eu. Fusce sit amet cursus nunc. In sollicitudin metus a  lacus vehicula ullamcorper eu at neque. Donec quis vulputate leo. Morbi convallis tortor eget semper consectetur. Fusce vulputate felis id accumsan rutrum. Nulla ac sem feugiat, accumsan dui eget, condimentum libero. Praesent placerat metus eget pellentesque ornare. Ut id sollicitudin libero, et egestas sem. Donec felis quam, suscipit nec fermentum id, porttitor in ligula. Nam massa massa, lobortis vitae mauris a, interdum eleifend nisl. Sed laoreet porttitor euismod. Aenean lobortis hendrerit consequat.
+
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus bibendum dapibus mi, vel tincidunt sapien. Morbi dui metus, vehicula ut velit a, iaculis interdum quam. Sed at nulla eget dui consectetur dapibus. Sed vel mi vel leo convallis aliquet sit amet in leo. In gravida sed tortor quis varius. Donec vel nulla sem. Nullam varius sit amet mauris sed interdum. Etiam pharetra rhoncus nisl, commodo tincidunt enim efficitur eu. Fusce sit amet cursus nunc. In sollicitudin metus a  lacus vehicula ullamcorper eu at neque. Donec quis vulputate leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus bibendum dapibus mi, vel tincidunt sapien. Morbi dui metus, vehicula ut velit a, iaculis interdum quam. Sed at nulla eget dui consectetur dapibus. Sed vel mi vel leo convallis aliquet sit amet in leo. In gravida sed tortor quis varius. Donec vel nulla sem. Nullam varius sit amet mauris sed interdum. Etiam pharetra rhoncus nisl, commodo tincidunt enim efficitur eu. Fusce sit amet cursus nunc. In sollicitudin metus a  lacus vehicula ullamcorper eu at neque. Donec quis vulputate leo.
+        <div class="clearfix">
+          <div class="float-end ml-3 mb-1 text-secondary">
+            Viewed 2849 times
+          </div>
+
         </div>
-      </div>
-
-      <!-- Title -->
-      <div class="row row2">
-        <label for="title" class="sr-only">Title</label>
-        <input name="title" id="title" type="" placeholder="Title" maxlength="50" required />
-      </div>
-
-      <!-- Tag name, New Field -->
-      <div class="row row3">
-        <label for="tagName" class="sr-only">Tag name</label>
-        <input name="tagName" id="tagName" type="" placeholder="tagName" maxlength="50" required />
-
-        <label for="newField" class="sr-only">New Field</label>
-        <input name="newField" id="newField" type="" placeholder="New Field" maxlength="50" required />
-      </div>
-
-      <!-- Contents -->
-      <div class="row row4">
-        <label for="contents" class="sr-only">New Field</label>
-        <input name="contents" id="contents" type="" placeholder="What would you like to share?" maxlength="500" required />
-      </div>
-
-      <!-- Buttons -->
-          <button type="button" name="btn-cancel d-inline-block" class="btn btn-danger">Cancel</button>
-          <button type="submit" name="btn-post d-inline-block" class="btn btn-primary">Post</button>
-
     </div>
-  </form>
+
+
+    <!-- sort, search -->
+    <!-- <div class="row row1">
+      <label for="sort-type">Sort by: Latest</label>
+
+      <label for="search" class="sr-only">Search</label>
+      <input name="search" id="search" type="" placeholder="Search" maxlength="50" required />
+    </div> -->
+
+    <!-- boards list -->
+    <!-- <div class="row row2">
+      <button class="category" type="button" id="btn-public" name="btn-public">Public</button>
+      <button class="category" type="button" id="btn-news" name="btn-news">News</button>
+      <button class="category" type="button" id="btn-events" name="btn-events">Events</button>
+      <button class="category" type="button" id="anonymous" name="btn-anonymous">Anonymous</button>
+    </div> -->
+
+    <!-- write button -->
+    <!-- <div class="row row4">
+      <button type="button" id="btn-write" name="btn-write">Write</button>
+    </div> -->
+  </div>
 </main>
 
 <!-- FOOTER -->

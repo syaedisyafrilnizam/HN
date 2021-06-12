@@ -24,6 +24,7 @@ const contact = require('./routes/contact');
 const chat = require('./routes/chat');
 const discover = require('./routes/discover');
 const places = require('./routes/places');
+const saved_post = require('./routes/saved-post');
 
 /* -------------------------------------------- */
 const app = express();
@@ -74,6 +75,7 @@ app.get("/logout", user.logout);
 
 // Bulletin Board
 app.get("/bulletin-board", bulletin.main); // 인욱 - Bulletin Board, Post View
+app.get("/write-post", bulletin.writePost);
 app.get("/post", bulletin.viewPost);
 
 // Contact List
@@ -87,6 +89,9 @@ app.get("/discover", discover.main); // 신이 - Discover
 
 // Local Places
 app.get("/places", places.main); // 영일 - Local Places
+
+// Saved Post
+app.get("/saved-post", saved_post.main);
 
 
 /* ----------------------------------- */

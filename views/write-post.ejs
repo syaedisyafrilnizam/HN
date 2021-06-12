@@ -1,0 +1,62 @@
+<%- include("partials/header"); -%>
+<!-- Custom styles -->
+<link href="css/main.css" rel="stylesheet">
+<link href="css/post.css" rel="stylesheet">
+</head>
+
+<body class="" style="background-color: #b6d5e1">
+<%- include("partials/navbar"); -%>
+
+<main role="main">
+  <div class="container py-4">
+    <div class="row">
+      <div class="col-4 my-3">
+        <div class="input-group">
+          <label class="input-group-text" for="inputGroupSelect01">Category</label>
+          <select class="form-select" id="inputGroupSelect01">
+            <option value="1" selected>Public</option>
+            <option value="2">News</option>
+            <option value="3">Event</option>
+            <option value="4">Anonymous</option>
+            <option value="5">Shop/Place</option>
+            <option value="6">Secondhand</option>
+            <option value="7">Lost & Found</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-8 my-3 text-end">
+        <button type="button" class="btn btn-warning mr-2">Add tag <i class="fas fa-plus"></i></button>
+        <div class="btn-group" role="group" aria-label="Options">
+          <button type="button" class="btn btn-warning"><i class="fas fa-lg fa-smile text-dark"></i></button>
+          <button type="button" class="btn btn-warning"><i class="fas fa-lg fa-paperclip text-dark"></i></button>
+          <button type="button" class="btn btn-warning"><i class="fas fa-lg fa-image text-dark"></i></button>
+          <button type="button" class="btn btn-warning"><i class="fas fa-lg fa-map-marker-alt text-dark"></i></button>
+        </div>
+      </div>
+    </div>
+    <form action='' method='post' class='text-center'>
+      <div class='form-group'>
+        <input type='text' class='form-control mb-3' name='title' placeholder='Write your post title here' autocomplete='off' maxlength='250' required>
+
+        <div class="row">
+          <div class="col-6">
+            <input type='text' class='form-control mb-3' name='tagName' placeholder='Tag name' autocomplete='off' maxlength='250' required>
+          </div>
+          <div class="col-6">
+            <input type='text' class='form-control mb-3' name='tagDesc' placeholder='Tag description' autocomplete='off' maxlength='250' required>
+          </div>
+        </div>
+
+        <textarea class='form-control mb-3' name='content' rows='15' placeholder='Write your post content here' required></textarea>
+      </div>
+      <div class="clearfix">
+        <button class='btn btn-md btn-primary mx-2 float-end' type='submit'>Post</button>
+        <a class='btn btn-danger btn-md mx-2 float-end' href='/bulletin-board' role='button'>Cancel</a>
+      </div>
+    </form>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<%- include("partials/copyright"); -%>
+<%- include("partials/footer"); -%>

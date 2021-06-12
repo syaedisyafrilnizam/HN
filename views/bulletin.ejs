@@ -3,36 +3,100 @@
 <link href="css/bulletin.css" rel="stylesheet">
 </head>
 
-<body class="text-center" style="background-color: #b6d5e1">
+<body class="" style="background-color: #b6d5e1">
 <%- include("partials/navbar"); -%>
 
 <main role="main">
   <div class="container">
+    <h3 class="mt-4 mb-4"><a href="/home"><i class="fas fa-arrow-left text-dark mr-3"></i></a>Bulletin Board</h3>
+      <div class="input-group my-3">
+        <label class="input-group-text" for="inputGroupSelect01">Sort by</label>
+        <select class="form-select" id="inputGroupSelect01">
+          <option value="1" selected>Latest</option>
+          <option value="2">Most viewed</option>
+          <option value="3">Most commented</option>
+        </select>
+        <input type="text" class="form-control ml-5" placeholder="Search post" aria-label="Search" aria-describedby="button-addon2">
+        <button class="btn btn-secondary" type="button" id="button-addon2"><i class="fas fa-search text-light"></i></button>
+      </div>
+
+      <div class="text-center my-3">
+        <button type="button" class="rounded-circle border-dark text-light bg-dark mx-2"><i class="fas fa-chevron-left text-light"></i></button>
+        <button type="button" class="btn btn-primary mx-1">Public</button>
+        <button type="button" class="btn btn-primary mx-1">News</button>
+        <button type="button" class="btn btn-primary mx-1">Event</button>
+        <button type="button" class="btn btn-primary mx-1">Anonymous</button>
+        <button type="button" class="btn btn-primary mx-1">Shop/Place</button>
+        <button type="button" class="btn btn-primary mx-1">Secondhand</button>
+        <button type="button" class="btn btn-primary mx-1">Lost & Found</button>
+        <button type="button" class="rounded-circle border-dark text-light bg-dark mx-2"><i class="fas fa-chevron-right text-light"></i></button>
+      </div>
+
+
+
+    <div class="card my-2">
+      <!-- <div class="card-header clearfix">
+        <h5 class="card-title m-0 float-start">Bulletin Board</h5>
+        <a href="/create-board" class="btn btn-secondary btn-sm float-end ml-2"><i class="fas fa-plus text-light"></i></a>
+      </div> -->
+      <div class="card-body" style="height: 600px">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Date</th>
+              <th scope="col">Title</th>
+              <th scope="col">By</th>
+              <th scope="col">Views</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">31/3/21</th>
+              <td>Lorem Ipsum drowke moarnuik koseve mesuori sdoek..</td>
+              <td>Otto</td>
+              <td>503</td>
+            </tr>
+            <tr>
+              <th scope="row">31/3/21</th>
+              <td>Lorem Ipsum drowke moarnuik koseve mesuori sdoek..</td>
+              <td>Johnny</td>
+              <td>503</td>
+            </tr>
+            <tr>
+              <th scope="row">31/3/21</th>
+              <td>Lorem Ipsum drowke moarnuik koseve mesuori sdoek..</td>
+              <td>Mark</td>
+              <td>503</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="clearfix">
+      <a href="/write-post" class="btn btn-warning float-end">Write <i class="fas fa-feather-alt ml-2"></i></a>
+    </div>
+
+
     <!-- sort, search -->
-    <div class="row row1">
+    <!-- <div class="row row1">
       <label for="sort-type">Sort by: Latest</label>
 
       <label for="search" class="sr-only">Search</label>
       <input name="search" id="search" type="" placeholder="Search" maxlength="50" required />
-    </div>
+    </div> -->
 
     <!-- boards list -->
-    <div class="row row2">
+    <!-- <div class="row row2">
       <button class="category" type="button" id="btn-public" name="btn-public">Public</button>
       <button class="category" type="button" id="btn-news" name="btn-news">News</button>
       <button class="category" type="button" id="btn-events" name="btn-events">Events</button>
       <button class="category" type="button" id="anonymous" name="btn-anonymous">Anonymous</button>
-    </div>
-
-    <!-- list of post -->
-    <div class="row row3">
-
-    </div>
+    </div> -->
 
     <!-- write button -->
-    <div class="row row4">
+    <!-- <div class="row row4">
       <button type="button" id="btn-write" name="btn-write">Write</button>
-    </div>
+    </div> -->
   </div>
 </main>
 

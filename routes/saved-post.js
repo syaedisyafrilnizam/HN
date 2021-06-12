@@ -1,16 +1,7 @@
 exports.main = function(req, res) {
   const user_id = req.session.user_id;
 
-  res.render('bulletin.ejs', {
-    user_id: user_id,
-    sess: req.session
-  });
-};
-
-exports.writePost = function(req, res) {
-  const user_id = req.session.user_id;
-
-  res.render('write-post.ejs', {
+  res.render('saved-post.ejs', {
     user_id: user_id,
     sess: req.session
   });

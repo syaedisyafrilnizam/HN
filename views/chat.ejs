@@ -6,60 +6,45 @@
 
 </head>
 
-<body class="text-center" style="background-color: #b6d5e1">
+<body class="" style="background-color: #b6d5e1">
 <%- include("partials/navbar"); -%>
 
 <main role="main">
-  <div class="container py-4">
+  <div class="container">
     <!-- Code starts here-->
-    <div class="container" style="background-color:##94a4b4">
+    <h3 class="mt-4 mb-3 text-dark"><a href="/home"><i class="fas fa-arrow-left text-dark mr-3"></i></a>Chat</h3>
+
       <div class="row">
-        <div class="col-4 rounded border-right" style="background-color:#1b262c;">
+        <div class="col-3 rounded border-right m-1" style="background-color:#1b262c;">
           <img class="profile-image rounded my-3 float-left" src="https://i.pinimg.com/originals/9e/91/a3/9e91a3da37242e8da2edd3f071a9bf10.jpg" alt="Profile image" style="width:50px; height:50px;"></img>
           <span class="settings-tray my-4 float-right">
                 <i class="material-icons icon-light" style="color: #fff;padding:0.5rem">message</i>
                 <i class="material-icons icon-light" style="color: #fff;">add_circle</i>
           </span>
         </div>
-        <div class="col-8 rounded" style="background-color:#1b262c;">
+        <div class="col-8 rounded m-1" style="background-color:#1b262c;">
           <img class="profile-image rounded my-3 float-left" src="https://i1.sndcdn.com/artworks-000420504324-qbn3os-t500x500.jpg" alt="Profile image" style="width:50px; height:50px;"></img>
           <h5 class="mx-3 my-4 float-left" style="color : #fff">Uncle Harold</h5>
           <span class="my-4 float-right">
             <i class="material-icons" style="color: #fff;">menu</i>
           </span>
         </div>
-      </div>
-
-      <div class="row">
-        <div class="col-4 rounded border-right" style="background-color:#0f4c75;">
-          <div class="row rounded my-1">
-            <div class="col-10">
-              <input class="rounded" type="text" placeholder="Search chat" style="width: 100%">
+        <div class="col-3 m-1 rounded border-right" style="background-color:#0f4c75;">
+            <div class="input-group my-3">
+              <input type="text" class="form-control" placeholder="Search post" aria-label="Search" aria-describedby="button-addon2">
+              <button class="btn btn-secondary" type="button" id="button-addon2"><i class="fas fa-search text-light"></i></button>
             </div>
-            <div class="col-2">
-              <i class="material-icons float-left" style="color:#fff;">search</i>
+            <div class="row border" style="background-color:#fff">
+              <img class="profile-image rounded-circle my-3 float-left" src="https://pbs.twimg.com/media/D-A5UpWUcAAsASS.jpg" alt="Profile image" style="width:80px; height:60px;"></img>
             </div>
-          </div>
-          <div>
-            <span>
-              <div class="row border" style="background-color:#fff">
-                <img class="profile-image rounded my-3 mx-3 float-left" src="https://pbs.twimg.com/media/D-A5UpWUcAAsASS.jpg" alt="Profile image" style="width:50px; height:50px;"></img>
-              </div>
-              <div class="row border" style="background-color:#fff">
-                <img class="profile-image rounded my-3 mx-3 float-left" src="https://pbs.twimg.com/media/D-A5UpWUcAAsASS.jpg" alt="Profile image" style="width:50px; height:50px;"></img>
-              </div>
-            </span>githu
-          </div>
+            <div class="row border" style="background-color:#fff">
+              <img class="profile-image rounded-circle my-3 float-left" src="https://pbs.twimg.com/media/D-A5UpWUcAAsASS.jpg" alt="Profile image" style="width:80px; height:60px;"></img>
+            </div>
         </div>
-        <div class="col-8 rounded" style="background-color:#fff">
-          <div class="row" style="background-color:#1b262c;">
-            <input type="text" placeholder="Write a message">
-          </div>
+        <div class="col-8 m-1 rounded" style="background-color:#fff">
+            <input type="text" placeholder="Write a message" class="my-3 form-control">
         </div>
       </div>
-
-    </div>
-    <!-- Code ends here -->
     <br>
   </div>
 </main>

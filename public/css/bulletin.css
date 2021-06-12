@@ -1,16 +1,17 @@
-html,
+/* html,
 body {
   height: 100%;
 }
-
+*/
 body {
-  -ms-flex-align: center;
-  align-items: center;
   padding-top: 60px;
-  padding-bottom: 60%;
 }
 
-.container {
+table th {
+  border-top: none!important;
+}
+
+/* .container {
   display: grid;
   grid-auto-flow: row;
   grid-row-gap: 10px;
@@ -40,4 +41,4 @@ body {
   color: #fff;
   background-color: #2E3535;
   border-color: #2E3535;
-}
+} */

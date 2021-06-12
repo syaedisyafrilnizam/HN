@@ -1,0 +1,68 @@
+<%- include("partials/header"); -%>
+<!-- Custom styles -->
+<link href="css/bulletin.css" rel="stylesheet">
+</head>
+
+<body class="" style="background-color: #b6d5e1">
+<%- include("partials/navbar"); -%>
+
+<main role="main">
+  <div class="container">
+    <h3 class="mt-4 mb-4"><a href="/home"><i class="fas fa-arrow-left text-dark mr-3"></i></a>My Saved Post</h3>
+      <div class="input-group my-3">
+        <label class="input-group-text" for="inputGroupSelect01">Category</label>
+        <select class="form-select" id="inputGroupSelect01">
+          <option value="1" selected>Public</option>
+          <option value="2">News</option>
+          <option value="3">Event</option>
+          <option value="4">Anonymous</option>
+          <option value="5">Shop/Place</option>
+          <option value="6">Secondhand</option>
+          <option value="7">Lost & Found</option>
+        </select>
+        <input type="text" class="form-control" placeholder="Search post" aria-label="Search" aria-describedby="button-addon2">
+        <button class="btn btn-secondary" type="button" id="button-addon2"><i class="fas fa-search text-light"></i></button>
+      </div>
+
+
+
+    <div class="card my-2">
+      <div class="card-body" style="height: 600px">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Date</th>
+              <th scope="col">Title</th>
+              <th scope="col">By</th>
+              <th scope="col">Views</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">31/3/21</th>
+              <td>Lorem Ipsum drowke moarnuik koseve mesuori sdoek..</td>
+              <td>Otto</td>
+              <td>503</td>
+            </tr>
+            <tr>
+              <th scope="row">31/3/21</th>
+              <td>Lorem Ipsum drowke moarnuik koseve mesuori sdoek..</td>
+              <td>Johnny</td>
+              <td>503</td>
+            </tr>
+            <tr>
+              <th scope="row">31/3/21</th>
+              <td>Lorem Ipsum drowke moarnuik koseve mesuori sdoek..</td>
+              <td>Mark</td>
+              <td>503</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<%- include("partials/copyright"); -%>
+<%- include("partials/footer"); -%>
